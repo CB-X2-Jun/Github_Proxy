@@ -76,7 +76,7 @@ async function testNode(node) {
   } catch (error) {
     return {
       node: node,
-      latency: 5999,
+      latency: 14999,
       status: 'failed'
     };
   }
