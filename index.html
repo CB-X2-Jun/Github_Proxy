@@ -90,6 +90,33 @@
     </div>
   </div>
 
+  <div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "zh-CN"
+    container.className = 'gitment-container gitment-root-container'
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+}
+var gitment = new Gitment({
+  owner: 'CB-X2-Jun',
+  repo: 'CB-X2-Jun/Github_Proxy',
+  oauth: {
+    client_id: 'Ov23liBmLpGDqiz84Wqv',
+    client_secret: 'af556c87e8c53600dfce3137cf298e61955ed643',
+  },
+})
+gitment.render('container')
+</script>
+
   <div class="footer">
     <div class="footer-content">
       <div class="copyright">
