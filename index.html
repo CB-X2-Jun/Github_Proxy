@@ -3,6 +3,7 @@
 <head>
   <title>GitHub 代理加速</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
   <link rel="icon" href="/favicon.jpg">
   <meta charset="UTF-8">
   <!-- Google Analytics -->
@@ -89,6 +90,28 @@
       </ul>
     </div>
   </div>
+
+  <div id="vssue" class="instructions"></div>
+  <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+  <script>
+    new Vue({
+      el: '#vssue',
+
+      data: {
+        title: 'Vssue Dev',
+
+        options: {
+          owner: 'CB-X2-Jun',
+          repo: 'Github_Proxy',
+          clientId: 'Ov23liBmLpGDqiz84Wqv',
+          clientSecret: 'af556c87e8c53600dfce3137cf298e61955ed643', // 只有在使用某些平台时需要
+        },
+      },
+
+      template: `<vssue :title="title" :options="options"></vssue>`,
+    })
+  </script>
 
   <div class="footer">
     <div class="footer-content">
