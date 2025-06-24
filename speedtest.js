@@ -63,7 +63,7 @@ async function getVisitCount() {
 async function testNode(node) {
   const startTime = Date.now();
   try {
-    const response = await fetch(`https://${node}`, {
+    const response = await fetch(`http://${node}`, {
       mode: 'no-cors',
       timeout: 5000
     });
