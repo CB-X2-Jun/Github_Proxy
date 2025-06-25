@@ -121,7 +121,7 @@ document.addEventListener('click', (e) => {
     const input = document.querySelector('.input-group input');
     const select = document.getElementById('proxySelect');
     if (input.value && select.value) {
-      const proxyUrl = `http://${select.value}/${input.value}`;
+      const proxyUrl = `https://${select.value}/${input.value}`;
       window.open(proxyUrl);
       updateVisitCount();  // 增加访问计数
     }
